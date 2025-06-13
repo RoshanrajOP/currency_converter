@@ -1,0 +1,128 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f5f7fa; 
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  .dashboard-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  
+ 
+  .api-section {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 12px 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    max-width: fit-content;
+    height: fit-content;
+  }
+  
+  .api-section h2 {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+  
+  .api-counter {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3b82f6;
+  }
+  
+  .section-box {
+    flex: 1 1 400px;
+    max-width: 460px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  .section-box h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  
+  .section-box select,
+  .section-box input[type="number"],
+  .section-box input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    font-size: 14px;
+  }
+  
+  .section-box button {
+    padding: 10px 16px;
+    background-color: #60a5fa;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .section-box button:hover {
+    background-color: #3b82f6;
+  }
+  
+  .converted-result {
+    margin-top: 16px;
+    padding: 16px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #1f2937;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  
+  .table-container {
+    margin-top: 16px;
+    overflow-x: auto;
+  }
+  
+  .historical-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 12px; 
+  }
+  
+  .historical-table td {
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .historical-table th {
+    background-color: #f3f4f6;
+    padding: 12px;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+  }
+  
+  .historical-table th {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  }
+  
