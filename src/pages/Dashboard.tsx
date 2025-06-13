@@ -11,13 +11,12 @@ const Dashboard: React.FC = () => {
   const [currencies, setCurrencies] = useState<Record<string, string>>({});
   const [sourceCurrency, setSourceCurrency] = useState('USD');
   const [targetCurrency, setTargetCurrency] = useState('INR');
-  const [amount, setAmount] = useState<number>(1);
+  const [amount, setAmount] = useState<number | null>(0);
   const [convertedAmount, setConvertedAmount] = useState<number | null>(null);
 
   const [baseCurrency, setBaseCurrency] = useState('USD');
   const [selectedDate, setSelectedDate] = useState('');
   const [historicalRates, setHistoricalRates] = useState<Record<string, number>>({});
-
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   useEffect(() => {
@@ -51,7 +50,7 @@ const Dashboard: React.FC = () => {
       if (data.success) {
         const rateKey = `${sourceCurrency}${targetCurrency}`;
         const rate = data.quotes[rateKey];
-        if (rate) {
+        if (rate && amount !== null) {
           setConvertedAmount(amount * rate);
         } else {
           setConvertedAmount(null);
@@ -116,10 +115,23 @@ const Dashboard: React.FC = () => {
 
           <input
             type="number"
-            value={amount}
             min="0"
-            onChange={(e) => setAmount(Number(e.target.value))}
-            placeholder="Enter amount"
+            placeholder="0"
+            value={amount === 0 || amount === null ? '' : amount}
+            onFocus={(e) => {
+              if (amount === 0 || amount === null) {
+                setAmount(null);
+              }
+            }}
+            onBlur={(e) => {
+              if (e.target.value === '') {
+                setAmount(0);
+              }
+            }}
+            onChange={(e) => {
+              const value = e.target.value;
+              setAmount(value === '' ? null : Number(value));
+            }}
           />
 
           <button onClick={handleConvert}>Convert</button>
