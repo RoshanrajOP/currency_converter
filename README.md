@@ -14,7 +14,7 @@ This project is a currency exchange dashboard built with **React**, **TypeScript
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/your-username/currency-dashboard.git
+git clone https://github.com/RoshanrajOP/currency_converter.git
 cd currency-dashboard
 pnpm install
 # or
