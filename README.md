@@ -23,3 +23,13 @@ npm install
 
 Create a .env file in the root directory with the following:
 VITE_CURRENCYLAYER_API_KEY=your_currencylayer_api_key
+
+
+
+🔑 Hardcoded Login Credentials
+To access the dashboard, use the following credentials on the login page:
+
+Username: admin
+
+Password: password123
+
